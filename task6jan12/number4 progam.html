@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move All zeros to the right of an given array</title>
+</head>
+<body>
+    <script>
+        var i,n;
+    let array = ([23,8,0,8,77,0,11,0]);
+    function moveZero(n) {
+        for ( i = n.length - 1; i >= 0; i--) {
+            if (n[i] == 0) {
+               n.splice(i, 1);
+                n.push(0);
+            } 
+        }
+         return n
+    }
+    //  document.write("array=")
+    document.write(moveZero(array))
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://127.0.0.1:5500/css_animations.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid blue;
+            padding: 15px;
+        }
+        .grid_parent{
+            display: grid;
+        /* grid: auto/ auto auto auto; */
+            grid-gap: 15px;
+            grid-template-columns: 100px 150px 200px ;
+            grid-template-rows: 50px 100px 150px 200px 250px;
+            justify-content: space-between;
+            
+        
+        }
+        .g-child{
+            width: 150px;
+            height: 150px;
+            animation: frame 5s;
+            position: relative;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-delay: 6s;
+        }
+        @keyframes frame{
+        0%{background-color: burlywoodl;left: 0px;top: 0px;}
+        25%{background-color: red;left: 200px;top: 0px;}
+        50%{background-color: yellow;left: 200px;top: 200px;}
+        75%{background-color: green;left: 0px;top: 300px;}
+       100%{background-color: blue;left: 0px;top: 0px;}
+            
+        }
+        body{
+            background-color: brown;
+        }
+        @media screen  and (min-width: 400px){
+        body{
+            background-color: blueviolet;
+        }   
+        }
+        .grid_parent{
+            display: grid;
+         grid: auto/ auto auto auto;
+
+        }
+            
+        
+
+    </style>
+</head><body>s
+
+    <div class="grid_parent">
+      <div class="f child">child</div>
+      <div class="f child">child</div>
+      <div class="f child">child</div>
+      <div class="f child">child</div>
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+      <div class="f child">child</div> 
+
+
+    </div><br><br><br>
+    <div class=" ani-parent">
+        <div class="g-child"> animation</div>
+
+    </div>

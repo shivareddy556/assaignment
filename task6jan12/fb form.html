@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fb form</title>
+    <style>
+    #fname,#sname,#options,#pass{
+        width: 200px;
+        height: 30px;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+        #options,#pass{
+          margin-right: 20px;
+        }
+    
+      .child{
+         background-color: darkgoldenrod;
+             size: 90%;
+     } 
+        .gender{
+          margin-left: 20px; 
+         /* border-radius: 5px;  */
+
+     } 
+     #days,#months,#years{
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+     }
+     .radio{
+        display: flex;
+        justify-content: space-around;
+       
+     }
+     
+     .a{
+         text-align: center;
+         border-radius: 10px;
+     }  
+     .bike{
+         margin-left: 30px;
+     }            
+      .parent1{
+        border: 2px solid blueviolet;
+          margin-left: 550px;
+         margin-right: 500px; 
+      }
+      .date{
+          margin-left: 30px;
+      }
+      .date1{
+         display: flex;
+         justify-content: space-around;
+         border-radius: 5px;
+      }
+      button{
+         border-radius: 6px;
+      }
+
+    </style>
+    </head> 
+    <body>
+         <form onsubmit="return validation(event)" novalidate name="myform" method="POST">
+             <div class="parent1">
+            <feildset>
+                <div class="bike">
+            <h1>sign in</h1>
+            <p> its quick and easy</p>
+            </div>
+            <hr>
+             <input type="text"   placeholder="firstname" name="firstname" id="fname" >
+            <input type="name"  placeholder="suname"  id="sname"><br><br>
+            <input type="numberoremail " placeholder="mobilenumber or Email" Id="options"> <br><br>
+            <input type="password"  placeholder="password" id="pass" ><br>
+            <!-- <div class="date"><p><h3>Date of birth</h3></p>
+              <input type="date"  placeholder="date" id="month"required> </div> -->
+         <div class=" gender">
+             <p><h3>Date of birth </h3></p>
+             <div class="date1">
+            <select id="days">
+            <option value="">day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+             <option value="day">7</option>
+            <option value="day">8</option>
+            <option value="day">9</option>
+            <option value="day">10</option>
+            <option value="day">11</option>
+            <option value="day">12</option>
+            <option value="day">13</option>
+            <option value="day">14</option>
+            <option value="day">15</option>
+            <option value="day">16</option>
+            <option value="day">17</option>
+            <option value="day">18</option>
+            <option value="day">19</option>
+            <option value="day">19</option>
+            <option value="day">20</option>
+            <option value="day">21</option>
+            <option value="day">22</option>
+            <option value="day">23</option>
+            <option value="day">24</option>
+            <option value="day">25</option>
+            <option value="day">26</option>
+            <option value="day">27</option>
+            <option value="day">28</option>
+            <option value="day">29</option>
+            <option value="day">30</option>
+            <option value="day">31</option> 
+            </select>
+            <select id="months">
+    
+             <option value="">months</option>
+             <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+             <option value="day">6</option>
+            <option value="day">7</option>
+            <option value="day">8</option>
+            <option value="day">9</option>
+            <option value="day">10</option>
+            <option value="day">11</option>
+            <option value="day">12</option>  
+            </select> 
+            <select id="years">
+            <option value="">years</option>
+            <option value="1">1998</option>
+           <option value="2">1999</option>
+           <option value="3">2000</option>
+           <option value="4"></option>
+           <option value="5"></option>
+           <option value="6"></option>
+           <option value="7"></option>
+           <option value="8"></option>
+           <option value=9></option>
+           <option value="10"></option>
+           <option value="11"></option>
+           <option value="12"></option>  
+    
+             </select>
+          </div>
+           <p><h3>Gender</h3></p>
+           <div class="radio">
+            <button>
+             <input type="radio"  name="gender" id="males">male 
+             </buttoon >
+            <button><input type="radio" name="gender">female</button >
+            <button><input type="radio" name="gender">othersBy</button >
+            </div>
+            <p>clicking Sign Up, you agree to our Terms, Data Policy
+             and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.
+            </p>
+        </div>
+            <div class="a">
+            <input type="submit"  value="submit" >
+            </div>
+            </feildset>
+       </div>
+    
+        </form> 
+        
+    <script>
+      function validation(e){
+         e.preventDefault()
+           var fname=document.myform.fname.value;
+           var sname=document.myform.sname.value;
+           var email=document.myform.options.value;
+            var password=document.myform.pass.value;
+            var days=document.myform.days.value;
+            var months=document.myform.months.value;
+            var years=document.myform.years.value;
+           var p=document.myform.males.value;
+           if(fname==""){
+                 document.getElementById("fname").style.border=" 1px solid red";
+                
+               
+            }
+             else if (fname!=""){
+                document.getElementById("fname").style.border=" 1px solid blue";
+                
+              
+             }
+             if(sname==""){
+                document.getElementById("sname").style.border=" 1px solid red";
+                
+             }
+             else if(sname!=""){
+                document.getElementById("sname").style.border=" 1px solid blue";
+                
+  
+             }
+             if(email==""){
+                document.getElementById("options").style.border=" 1px solid red";
+                  
+             }
+             else if(email!=""){
+                document.getElementById("options").style.border=" 1px solid blue";
+                
+             }
+             if(password==""){
+                document.getElementById("pass").style.border=" 1px solid red";
+              
+             }
+             else if(password!=""){
+                document.getElementById("pass").style.border=" 1px solid blue";
+              
+             }
+            
+             if(days==""){
+                document.getElementById("days").style.border=" 1px solid red";
+                   
+             }
+             else if(days!=""){
+                document.getElementById("days").style.border=" 1px solid blue";
+                
+             }
+              if(months==""){
+                 document.getElementById("months").style.border=" 1px solid red";
+              }
+              else if(months!==""){
+                 document.getElementById("months").style.border=" 1px solid blue";
+                
+              }
+              if(years==""){
+                document.getElementById("years").style.border=" 1px solid red";
+                
+              }
+              else if(years!=""){
+                 document.getElementById("years").style.border=" 1px solid blue";
+                
+              }
+              if(p==""){
+                 document.getElementById("males").style.border=" 1px solid red";
+              
+              }
+           else if (p!=""){
+               document.getElementById("males").style.border=" 1px solid red";
+              
+              }
+              else{
+                 document.myform.submit(event);
+              }
+       }
+
+
+       </script>
+       </body> 

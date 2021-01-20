@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validations</title>
+    <style>
+        .parent{
+            border: 1px solid;
+            margin: 5%;
+            margin-right: 50%;
+            margin-left: 20%;
+            text-align: center;
+            background-color: cadetblue;
+           
+        }
+        .click{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <form name="forms" method="POST" onsubmit=" return validation()" action="success.html">
+            <div class="child">
+            <h1>registation form</h1>
+        <label for="firstname"><b>firsrname</b></label>
+        <input type="text" placeholder="Enter firstname"  id="fname" required><br><br>
+        <label for="surname"><b>surname</b></label>
+        <input type="text" placeholder="Enter surname"  id="sname" required><br><br>
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email"  id="email" required><br><br>
+         <label for="mobilenumber" ><b>mobilenumber</b></label>
+        <input type="number" placeholder="enter mobilenumber"  id="mnumber" required> <br><br> 
+        <label for="password"><b>password</b></label>
+        <input type="password" placeholder="Enter password"  id="pass" required><br><br>
+        <button type="submit" class="click"> Click on</button>
+    
+          </div>
+         </div>
+        </form>
+        <script>
+             function validation(){
+               var firstname=document.forms.fname.value;
+               if(firstname.length<4 || firstname.length>10){
+                  alert("please min4char & max10char ");
+                  return false;
+    
+               }
+               var surname=document.forms.sname.value;
+               if(surname.length<4 ||surname.length>10){
+                  alert("please min4char & max10char");
+                  return false;
+               }
+               var email1=document.forms.email.value;
+               var atposition=email1.indexOf("@");
+               var dotposition=email1.lastIndexOf(".");
+               if(atposition<1 || dotposition<atposition+2 || dotposition+2>=email1.length){
+                  alert("please enter valid email");
+                  return false;
+               }
+               var mobilenumber=document.forms.mnumber.value;
+               if(mobilenumber.length == 10){
+                   return false;                  
+               }
+            // //    else if((mobilenumber.charAt(0)!=9)&&(mobilenumber.charAt(0)!=7)&&(mobilenumber.charAt(0)!=8))
+
+            // //    {
+                    
+            //    }
+                else{
+                alert("enter 10 digits  number");
+                return true;
+                }
+                
+    
+    
+                 var password=document.forms.pass.value;
+                 if(password.length<8 ||password.length>14){
+                     alert("password must contain characters");
+                     return false
+                 }
+             }
+             </script>
+    </body>
+     </html>
